@@ -40,10 +40,11 @@ Input: center= 720, tuples(x, y) = (1440, 900)  Output: 0.000000
 
 class Solution:
     def propcontrol(self, center, res):
-        center_point = res[0] / 2
-        error = center - center_point
-        steering_angle = error / center_point
-        return round(steering_angle, 6)
+        target = res[0] / 2
+        error = center - target
+        steering_angle = error / target
+        return steering_angle
+
             #type center: int
             #type res: tuples of int
             #return type: float
